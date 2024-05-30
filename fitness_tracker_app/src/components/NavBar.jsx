@@ -13,6 +13,12 @@ const NavBar = () => {
         <Nav.Link as={Link} to="/exercises">
           Exercises
         </Nav.Link>
+        <Nav.Link as={Link} to="/update-exercise">
+          Update Exercise
+        </Nav.Link>
+        <Nav.Link as={Link} to="/summary">
+          Summary
+        </Nav.Link>
       </Nav>
     </Navbar>
   );

@@ -16,8 +16,17 @@ const exerciseSlice = createSlice({
         (exercise) => exercise.id !== action.payload
       );
     },
+    updateExercise: (state, action) => {
+      const index = state.exercises.findIndex(
+        (exercise) => exercise.id === action.payload.id
+      );
+      if (index !== -1) {
+        state.exercises[index] = action.payload;
+      }
+    },
   },
 });
 
-export const { addExercise, deleteExercise } = exerciseSlice.actions;
+export const { addExercise, deleteExercise, updateExercise } =
+  exerciseSlice.actions;
 export default exerciseSlice.reducer;
